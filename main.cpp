@@ -52,6 +52,7 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR lpCmdLine, _In
 
 		MatrixScreenPrintf(0, kRowHeight * 0, InverseM1);
 		MatrixScreenPrintf(0, kRowHeight * 2 + 10, InverseM2);
+		MatrixScreenPrintf(0, kRowHeight * 2 + 10, InverseM2);
 
 		///
 		/// ↑描画処理ここまで
