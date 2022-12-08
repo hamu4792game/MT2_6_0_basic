@@ -23,8 +23,8 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR lpCmdLine, _In
 	m2.m2[1][0] = 3.0f;	m2.m2[1][1] = 4.0f;	m2.m2[1][2] = 0.0f;
 	m2.m2[2][0] = 5.0f;	m2.m2[2][1] = 6.0f;	m2.m2[2][2] = 1.0f;
 
-	Matrix2x2 InverseM1;
-	Matrix3x3 InverseM2;
+	Matrix2x2 TransposeM1;
+	Matrix3x3 TransposeM2;
 
 	// ウィンドウの×ボタンが押されるまでループ
 	while (Novice::ProcessMessage() == 0) {
@@ -39,8 +39,8 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR lpCmdLine, _In
 		/// ↓更新処理ここから
 		///
 
-		InverseM1 = Inverse(m1);
-		InverseM2 = Inverse(m2);
+		TransposeM1 = Transpose(m1);
+		TransposeM2 = Transpose(m2);
 
 		///
 		/// ↑更新処理ここまで
@@ -50,8 +50,8 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR lpCmdLine, _In
 		/// ↓描画処理ここから
 		///
 
-		MatrixScreenPrintf(0, kRowHeight * 0, InverseM1);
-		MatrixScreenPrintf(0, kRowHeight * 2 + 10, InverseM2);
+		MatrixScreenPrintf(0, kRowHeight * 0, TransposeM1);
+		MatrixScreenPrintf(0, kRowHeight * 2 + 10, TransposeM2);
 
 		///
 		/// ↑描画処理ここまで

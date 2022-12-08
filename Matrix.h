@@ -15,9 +15,9 @@ struct Matrix3x3
 	float m2[3][3];
 };
 
-Matrix2x2 Inverse(Matrix2x2 matrix);
+Matrix2x2 Transpose(Matrix2x2 matrix);
 
-Matrix3x3 Inverse(Matrix3x3 matrix);
+Matrix3x3 Transpose(Matrix3x3 matrix);
 
 static const int kRowHeight = 30;
 static const int kColumnWidth = 54;
